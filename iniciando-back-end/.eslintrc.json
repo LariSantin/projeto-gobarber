@@ -30,6 +30,7 @@
       "@typescript-eslint/camelcase": "off",
       "@typescript-eslint/no-var-requires": "off",
       "no-useless-constructor": "off",
+      "one-var-declaration-per-line": "off",
       "@typescript-eslint/no-unused-vars": ["error", {
         "argsIgnorePattern": "_"
       }],

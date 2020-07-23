@@ -3,7 +3,6 @@ import { Request, Response } from 'express';
 import UpdateUserAvatar from '@modules/users/services/UpdateUserAvatarService';
 import UsersRepository from '@modules/users/infra/typeorm/repositories/UsersRepository';
 
-
 export default class UserAvatarController {
   public async update(request: Request, response: Response): Promise<Response> {
     const usersRepository = new UsersRepository();
@@ -18,5 +17,4 @@ export default class UserAvatarController {
 
     return response.json(user);
   }
-
 }
