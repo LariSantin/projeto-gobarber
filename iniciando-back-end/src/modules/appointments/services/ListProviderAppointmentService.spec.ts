@@ -16,20 +16,20 @@ describe('ListProviderAppointment', () => {
     const appointment1 = await fakeAppointmentsRepository.create({
       provider_id: 'provider',
       user_id: 'user',
-      date: new Date(2020, 12, 21, 8, 0, 0),
+      date: new Date(2020, 11, 21, 8, 0, 0),
     });
 
     const appointment2 = await fakeAppointmentsRepository.create({
       provider_id: 'provider',
       user_id: 'user',
-      date: new Date(2020, 12, 21, 9, 0, 0),
+      date: new Date(2020, 11, 21, 9, 0, 0),
     });
 
     const appointments = await listProviderAppointment.execute({
       provider_id: 'provider',
-      year: 2020,
-      month: 12,
       day: 21,
+      month: 12,
+      year: 2020,
     });
 
     expect(appointments).toEqual([appointment1, appointment2]);

@@ -25,9 +25,9 @@ class ListProviderAppointmentService {
     const appointments = await this.appointmentsRepository.findAllInDayFromProvider(
       {
         provider_id,
-        year,
-        month,
         day,
+        month,
+        year,
       },
     );
 
